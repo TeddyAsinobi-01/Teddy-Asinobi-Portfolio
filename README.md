@@ -6,8 +6,11 @@ This is a personal portfolio project showcasing my skills, projects, and experie
 Features
 
 About Me: Brief introduction about myself.
+
 Projects: Highlighting key projects with descriptions and links.
+
 Skills: List of technical and soft skills.
+
 Contact: Ways to get in touch with me.
 
 Getting Started
