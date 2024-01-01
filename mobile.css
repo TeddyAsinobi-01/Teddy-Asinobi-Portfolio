@@ -1,0 +1,384 @@
+/* HEADER SECTION */
+
+@media screen and (min-width: 360px) and (max-width:540px) {
+    #header {
+        height: 65vh;
+        background-image: url(Image/landing/landingimg.jpg);
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width:540px) {
+
+    /* MOBILE MENU/BAR */
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: inherit;
+        top: -1000px;
+        opacity: 0;
+        transition: top 0.5s ease-in-out;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        background: #131313;
+        top: 6%;
+        left: 0;
+        opacity: 1;
+        transition: top 0.5s ease-in-out;
+        z-index: 99;
+        height: 39%;
+        font-size: 1.6rem;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu {
+        position: relative;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+
+    /* MOBILE MENU/BAR ENDS*/
+}
+
+@media screen and (min-width: 412px) and (max-width:430px) {
+    .navbar__menu.active {
+        height: 28%;
+    }
+}
+
+@media screen and (width: 390px) {
+    .navbar__menu.active {
+        height: 30%;
+    }
+}
+
+@media screen and (width: 360px) {
+    #header {
+        height: 78vh;
+    }
+}
+
+@media screen and (width:375px) {
+    #header {
+        height: 88vh;
+    }
+}
+
+@media screen and (width:390px) {
+    #header {
+        height: 69vh;
+    }
+}
+
+@media screen and (width:768px) {
+    #header {
+        height: 57vh;
+    }
+}
+
+@media screen and (width:820px) {
+    #header {
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 912px) and (max-width:1024px) {
+    #header {
+        height: 43vh;
+    }
+}
+
+@media screen and (height: 600px) {
+    #header {
+        height: 97vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (width:540px) {
+    #header {
+        height: 81vh;
+    }
+
+    .header-text {
+        margin-top: 87%;
+    }
+}
+
+@media screen and (width: 280px) {
+    #header {
+        height: 90vh;
+        background-image: url(Image/landing/landingimgCopy.jpg);
+    }
+
+    .header-text {
+        margin-top: 142%;
+    }
+
+    .container {
+        padding: 10px 3%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:820px) {
+    .header-text h1 {
+        font-size: 45px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-height: 1180px) and (max-height: 1366px) {
+    nav ul li {
+        padding: 10px 17px;
+    }
+}
+
+@media screen and (width:912px) {
+    .header-text h1 {
+        font-size: 50px;
+    }
+
+
+}
+
+/* HEADER SECTION ENDS */
+/* ABOUT SECTION */
+@media screen and (max-width: 600px) {
+
+    .logo {
+        margin-right: 171px;
+    }
+
+    .sub-title {
+        font-size: 35px;
+    }
+
+    #about {
+        padding: 0;
+    }
+
+    .about-col-1 {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: -70px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .services-list {
+        width: 86%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(301px, 0fr));
+    }
+
+    .services-list div {
+        padding: 30px;
+    }
+
+    .services-list div i {
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+
+    .work-list {
+        height: 83vh;
+        grid-template-columns: repeat(auto-fit, minmax(301px, 0fr));
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .contact-left p {
+        margin-top: 6px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .btn {
+        display: block;
+        margin: 8px auto;
+    }
+
+    .copyright {
+        height: 17vh;
+        padding: 8px 0;
+        font-size: 11px;
+    }
+
+    .copyright span {
+        font-size: 14px;
+    }
+
+    .contact-left p i {
+        font-size: 15px;
+    }
+}
+
+@media screen and (width: 280px) {
+    .logo {
+        margin-right: 93px;
+    }
+
+    .navbar__menu.active {
+        top: 8%;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+        grid-gap: 10px;
+    }
+
+    #about {
+        padding: 40px 0 0 0;
+    }
+
+    .services-list div {
+        padding: 8px;
+    }
+
+    .work-list {
+        height: 19vh;
+        grid-template-columns: repeat(auto-fit, minmax(191px, 1fr));
+    }
+}
+
+@media screen and (width:540px) {
+
+    .services-list {
+        width: 97%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(257px, 2fr));
+    }
+
+    .work-list {
+        height: 91vh;
+        grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
+    }
+
+    .copyright {
+        height: 24vh;
+    }
+}
+
+@media screen and (min-width: 412px) and (max-width: 430px) {
+    .copyright {
+        height: 41vh;
+    }
+
+}
+
+@media screen and (width:390px) {
+    .copyright {
+        height: 35vh;
+    }
+}
+
+@media screen and (width:360px) {
+    .copyright {
+        height: 26vh;
+    }
+}
+
+@media screen and (width:768px) {
+    .copyright {
+        height: 46vh;
+        padding: 0;
+    }
+}
+
+@media screen and (width:820px) {
+    .copyright {
+        height: 53vh;
+        padding: 0;
+    }
+}
+
+@media screen and (width:912px) {
+    .copyright {
+        height: 60vh;
+        padding: 0;
+    }
+}
+
+@media screen and (height:1366px) {
+    .copyright {
+        height: 60vh;
+        padding: 0;
+    }
+}
+
+/* ABOUT SECTION  ENDS */

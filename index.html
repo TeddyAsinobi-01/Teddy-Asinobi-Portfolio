@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy Asinobi's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Image/logo/ted.PNG">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="https://kit.fontawesome.com/5537108f41.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER SECTION -->
+    <header id="header">
+
+        <nav>
+            <img src="Image/logo/logo.png" alt="Logo Image" class="logo">
+            <ul class="navbar__menu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">My Services</a></li>
+                <li><a href="#portfolio">My Portfolio</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="header-text">
+                <p>Front End Developer</p>
+                <h1>Hi, I'm <span>Teddy</span><br>Asinobi From <br> Nigeria</h1>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION ENDS-->
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Image/about/about img.png" alt="profile image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am a creative front end developer,
+                        adept at creating astonishing and engaging user
+                        interfaces for your web applications or websites.<br>
+                        I always meet deadlines with quality work.
+                        <br>
+                        <br>
+                        Never hesitate to make the best use of my
+                        skill and knowledge in order to complete every project successfully.
+                        <br>
+                        <br>
+                        My core competency lies in
+                        the complete groud-to-top management of a new website development project, and I
+                        have
+                        the capability to<br> complete a website from scratch. </span>
+
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front End Development</span><br> Implementation of Designed Web Interfaces</li>
+                            <li><span>Graphic Design</span><br> Creating stunning designs</li>
+                            <li><span>Debugging</span><br> Fixing errors found in your already existing website<br>
+                                in order to get smooth web flow</li>
+                            <li><span>Others</span><br> Computer appreciation, Tutoring and Guiding beginners, <br>Basic
+                                photo/video editing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Till Date</span><br> Freelance Front-End Developer</li>
+                            <li><span>2019 - 2021</span><br> Junior Developer at Jensiv Technologies, Owerri Imo State
+                            </li>
+                            <li><span>2018 - 2019</span><br> Intern Developer at Ken-Saro Wiwa Hub, Rivers State Nigeria
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018 - 2019 Internship</span><br> Ken-Saro Wiwa Hub, Rivers State Nigeria</li>
+                            <li><span>2013 - 2018 High School</span><br> Paragon City Light College, Rivers State
+                                Nigeria</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT SECTION ENDS -->
+    <!-- SERVICE SECTION -->
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>In order to buiild stunning web pages that are also responsive<br>
+                        the language used is JavaScript. While HTML, CSS are used as mark-up languages.<br> also if you
+                        need to debug an existing website<br> You can count on me to find and fix the said
+                        error.
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Graphic Design</h2>
+                    <p>As mentioned Graphic design is also a skill I possess,<br>
+                        build/create your banners, flyers, infographics, logos, <br> programmes and any other graphic
+                        related works
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h2>Computer Mentorship</h2>
+                    <p>Are you a beginner in search of someone in the field to <br>attach yourself inorder to gain
+                        experience, or someone who is looking to build his/her computer <br>skills form scratch. I am
+                        the
+                        right person to meet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE SECTION ENDS -->
+    <!-- PORFOLIO -->
+    <section id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Image/project/projects-01.PNG" alt="showbiz project">
+                    <div class="layer">
+                        <h3>Show Business website</h3>
+                        <p>This is a show business website which is meant
+                            to attract users/parents to enroll their children for the show.</p>
+                        <a href="#"> <i class="fa-solid fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Image/project/project-02.PNG" alt="ecommerce project">
+                    <div class="layer">
+                        <h3>Ecommerce Site</h3>
+                        <p>This is an ecommerce website used in selling heavy duty truck parts.</p>
+                        <a href="#"> <i class="fa-solid fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Image/project/project-03.PNG" alt="school project">
+                    <div class="layer">
+                        <h3>School website</h3>
+                        <p>This is a website meant to attract parents/guardians to enroll their children/wards in a
+                            school.</p>
+                        <a href="#"> <i class="fa-solid fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn"> See More</a>
+        </div>
+    </section>
+    <!-- PORFOLIO ENDS -->
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> ibonisaledu@gmail.com</p>
+                    <p class="call"><i class="fa-solid fa-phone-square "></i> Call Me On: <a
+                            href="tel:07017286207">+234-701-728-6207</a></p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/ibonisa.ledu?mibextid=ZbWKwL"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/jessi-asinobi-8b3aa6253/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/TeddyAsinobi-01"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://twitter.com/teddy_asinobi"><i class="fa-brands fa-square-twitter"></i></a>
+                    </div>
+                    <a href="document/Asinobi Teddy CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" id="name" placeholder="Your Name" required>
+                        <input type="email" name="Email" id="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class=" btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <div class="copyright">
+        <p>Copyright © Teddy Asinobi, Made with <span>❤</span> by Ibonisa It Solutions </p>
+    </div>
+    <!-- CONTACT ENDS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
