@@ -72,7 +72,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    width: 50%;
 }
 
 nav ul li a::before {
