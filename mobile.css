@@ -1,5 +1,12 @@
 /* HEADER SECTION */
 
+@media screen and (min-width: 280px) and (max-width:540px) {
+    #header {
+
+        background-attachment: unset;
+    }
+}
+
 @media screen and (min-width: 360px) and (max-width:540px) {
     #header {
         height: 65vh;
