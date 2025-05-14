@@ -1,16 +1,40 @@
 /* HEADER SECTION */
 
-@media screen and (min-width: 280px) and (max-width:540px) {
-    #header {
-
+@media screen and (min-width: 280px) and (max-width:541px) {
+    /* #header {
         background-attachment: unset;
+    } */
+    .header-img{
+        display: none;
+    }
+    .header-img2{
+        display:block;
+        width: 100%;
+    }
+    nav{
+        width: 100%;
+    }
+    .header-text {
+        margin-top: -195px;
+        position: absolute;
+        background: linear-gradient(rgba(0, 0.5, 0.5, 0), #080808)
+    }
+    .lit-container {
+        display: block;
+    }
+    .header-img2 {
+        position: relative;
+        bottom: -100px;
+    }
+    .header-img2 img {
+        width: 112%;
+        height: 70vh;
     }
 }
 
 @media screen and (min-width: 360px) and (max-width:540px) {
     #header {
-        height: 65vh;
-        background-image: url(Image/landing/landingimg.jpg);
+        height: 100vh;
     }
 }
 
@@ -93,15 +117,10 @@
 
 @media screen and (width: 360px) {
     #header {
-        height: 78vh;
+        height: 100vh;
     }
 }
 
-@media screen and (width:375px) {
-    #header {
-        height: 88vh;
-    }
-}
 
 @media screen and (width:390px) {
     #header {
@@ -121,9 +140,15 @@
     }
 }
 
-@media screen and (min-width: 912px) and (max-width:1024px) {
+@media screen and (width: 912px) {
     #header {
-        height: 43vh;
+        height: 57vh;
+    }
+    .header-img img {
+        margin-top: 128px;
+    }
+    .header-text {
+        margin-top: 37%;
     }
 }
 
@@ -135,7 +160,7 @@
 
 @media screen and (max-width: 600px) {
     .header-text {
-        margin-top: 100%;
+        margin-top: -135px;
         font-size: 16px;
     }
 
@@ -143,14 +168,143 @@
         font-size: 30px;
     }
 }
+/* Iphone XR */
+@media screen and (width: 414px){
+        nav{
+        width: 100%;
+    }
+    #header {
+        height: 100vh;
+    }
+    .container {
+        padding: 10px 2%;
+        height: 100%;
+    }
+    .header-text {
+        margin-top: -195px;
+        position: absolute;
+        background: linear-gradient(rgba(0, 0.5, 0.5, 0), #080808)
+    }
+    .lit-container {
+        display: block;
+    }
+    .header-img2 {
+        position: relative;
+        bottom: -100px;
+    }
+    .header-img2 img{
+        width: 100%;
+    }
+}
+/* Iphone SE */
+@media screen and (width:375px) {
+    nav{
+        width: 100%;
+    }
+    #header {
+        height: 99vh;
+    }
+    .container {
+        padding: 10px 2%;
+        height: 100%;
+    }
+    .header-text {
+        margin-top: -195px;
+        position: absolute;
+        background: linear-gradient(rgba(0, 0.5, 0.5, 0), #080808)
+    }
+    .lit-container {
+        display: block;
+    }
+    .header-img2 {
+        position: relative;
+        bottom: -100px;
+    }
+    .header-img2 img{
+        width: 100%;
+    }
+    .navbar__menu.active {
+        background: #131313;
+        top: 8%;
+    }
+    
+}
+/* Iphone 12 Pro */
+@media screen and (width: 390px) {
+    nav{
+    width: 100%;
+}
+#header {
+    height: 100vh;
+}
+.container {
+    padding: 10px 2%;
+    height: 100%;
+}
+.header-text {
+    margin-top: -195px;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0.5, 0.5, 0), #080808)
+}
+.lit-container {
+    display: block;
+}
+.header-img2 {
+    position: relative;
+    bottom: -100px;
+}
+.header-img2 img{
+    width: 100%;
+}
+}
+/* Iphone 14 Pro Max */
+@media screen and (width: 430px){
+    .container {
+        height: 100%;
+    }
+    .header-text {
+        margin-top: -137px;
+    }
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (width:344px){
+    nav {
+        width: 104%;
+    }
+    .header-img2 img {
+        width: 112%;
+        height: 75vh;
+    }
+    .header-text {
+        margin-top: -207px;
+    }
+}
 @media screen and (width:540px) {
     #header {
-        height: 81vh;
+        height: 100vh;
     }
-
+.container{
+    height: 100%;
+}
     .header-text {
-        margin-top: 87%;
+        margin-top: -210px;
     }
 }
 
@@ -207,6 +361,7 @@
 
     #about {
         padding: 0;
+        height: 100vh;
     }
 
     .about-col-1 {
@@ -222,7 +377,7 @@
     }
 
     .about-col-2 {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .tab-links {
@@ -231,9 +386,10 @@
     }
 
     .services-list {
-        width: 86%;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(301px, 0fr));
+        justify-content: center;
     }
 
     .services-list div {
@@ -246,8 +402,9 @@
     }
 
     .work-list {
-        height: 83vh;
+        height: 100vh;
         grid-template-columns: repeat(auto-fit, minmax(301px, 0fr));
+        justify-content: center;
     }
 
     .contact-left,
@@ -269,7 +426,7 @@
     }
 
     .copyright {
-        height: 17vh;
+        height: 6vh;
         padding: 8px 0;
         font-size: 11px;
     }
@@ -280,6 +437,9 @@
 
     .contact-left p i {
         font-size: 15px;
+    }
+    #contact{
+        height: 100vh;
     }
 }
 
@@ -337,55 +497,111 @@
     }
 
     .copyright {
-        height: 24vh;
+        height: 6vh;
     }
 }
 
 @media screen and (min-width: 412px) and (max-width: 430px) {
     .copyright {
-        height: 41vh;
+        height: 6vh;
     }
 
 }
 
 @media screen and (width:390px) {
     .copyright {
-        height: 35vh;
+        height: 6vh;
     }
 }
 
 @media screen and (width:360px) {
     .copyright {
-        height: 26vh;
+        height: 6vh;
     }
 }
 
 @media screen and (width:768px) {
     .copyright {
-        height: 46vh;
+        height: 6vh;
         padding: 0;
     }
 }
 
 @media screen and (width:820px) {
+    .header-img img {
+        margin-top: 131px;
+    }
+    .header-text {
+        width: 50%;
+        margin-top: 42%;
+    }
     .copyright {
-        height: 53vh;
+        height: 6vh;
         padding: 0;
     }
 }
-
+@media screen and (width:1024px){
+    #header {
+        height: 61vh;
+    }
+    .header-img img {
+        margin-top: 191px;
+    }
+    .header-text {
+        margin-top: 36%;
+    }
+}
 @media screen and (width:912px) {
     .copyright {
-        height: 60vh;
+        height: 6vh;
         padding: 0;
     }
 }
 
 @media screen and (height:1366px) {
     .copyright {
-        height: 60vh;
+        height: 6vh;
         padding: 0;
     }
 }
-
+@media screen and (height:600px){
+    #header {
+        height: 100vh;
+    }
+    .header-img img {
+        margin-top: 76px;
+    }
+    
+}
+@media screen and (width:1280px){
+    .header-img img {
+        width: 90%;
+    }
+}
+@media screen and (width: 540px){
+    #about {
+        height: 120vh;
+    }
+}
+@media screen and (width: 360px){
+    #about {
+        height: 136vh;
+    }
+}
+@media screen  and (width: 375px)  {
+    #about {
+        height: 136vh;
+    }
+}
+@media screen and (width: 390px) {
+    #about {
+        height: 110vh;
+    }
+}
+@media screen and (width: 344px) {
+    #about {
+        padding: 0;
+        height: 117vh;
+    }
+}
 /* ABOUT SECTION  ENDS */
