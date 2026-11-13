@@ -28,13 +28,13 @@
     }
     .header-img2 img {
         width: 112%;
-        height: 70vh;
+        height: 47vh;
     }
 }
 
 @media screen and (min-width: 360px) and (max-width:540px) {
     #header {
-        height: 100vh;
+        height: 60vh;
     }
 }
 
@@ -117,7 +117,7 @@
 
 @media screen and (width: 360px) {
     #header {
-        height: 100vh;
+        height: 65vh;
     }
 }
 
@@ -202,7 +202,7 @@
         width: 100%;
     }
     #header {
-        height: 99vh;
+        height: 72vh;
     }
     .container {
         padding: 10px 2%;
@@ -221,7 +221,8 @@
         bottom: -100px;
     }
     .header-img2 img{
-        width: 100%;
+        width: 79%;
+        margin-left: 21%
     }
     .navbar__menu.active {
         background: #131313;
