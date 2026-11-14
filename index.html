@@ -1,236 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teddy Asinobi's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="Image/logo/ted.PNG">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5537108f41.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teddy Asinobi | Front-End Developer &amp; Vibe Coder in Nigeria</title>
+  <meta name="description" content="Teddy Asinobi is a front-end developer and vibe coder in Nigeria. I build fast, responsive websites and web apps with HTML, CSS, JavaScript and React.">
+  <meta name="theme-color" content="#2340F0">
+
+  <!-- Social sharing (swap the relative image path for your full site URL once deployed) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Teddy Asinobi | Front-End Developer &amp; Vibe Coder">
+  <meta property="og:description" content="Fast, responsive websites and web apps, built with clean code and AI as a pair programmer.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <!-- HEADER SECTION -->
-    <header id="header">
+  <!-- Icon sprite: every icon on the page is referenced from here, so there are no external icon scripts -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4zM22 2 11 13"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.3-.3-2.5-1-3.5.3-1.2.3-2.4 0-3.5 0 0-1 0-3 1.5a13 13 0 0 0-8 0C6 2 5 2 5 2c-.3 1.1-.3 2.3 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.4.5-.7 1.1-.9 1.7-.2.6-.2 1.2-.1 1.8v4M9 18c-4.5 2-5-2-7-2"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor" stroke="none"/></symbol>
+  </svg>
 
-        <nav>
-            <img src="Image/logo/logo.png" alt="Logo Image" class="logo">
-            <ul class="navbar__menu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#services">My Services</a></li>
-                <li><a href="#portfolio">My Portfolio</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span> <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="lit-container">
-                <div class="header-img2">
-                    <img src="Image/landing/IMG_20250420_162835_2-removebg-preview.png">
-                </div>
-                <div class="header-text">
-                    <p>Front End Developer</p>
-                    <h1>Hi, I'm <span>Teddy</span><br>Asinobi From <br> Nigeria</h1>
-                </div>
-                <div class="header-img">
-                    <img src="Image/landing/IMG_20250420_162835_2-removebg-preview.png">
-                </div>
-                
-            </div>
-          
-        </div>
-    </header>
-    <!-- HEADER SECTION ENDS-->
-    <!-- ABOUT SECTION -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        I am a creative front end developer,
-                        adept at creating astonishing and engaging user
-                        interfaces for your web applications or websites.<br>
-                        I always meet deadlines with quality work.
-                        <br>
-                        <br>
-                        Never hesitate to make the best use of my
-                        skill and knowledge in order to complete every project successfully.
-                        <br>
-                        <br>
-                        My core competency lies in
-                        the complete groud-to-top management of a new website development project, and I
-                        have
-                        the capability to<br> complete a website from scratch. </span>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                    </p>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="#top" aria-label="Teddy Asinobi, home">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#2340F0"/>
+          <rect x="11" y="15" width="35" height="11" rx="3.5" fill="#fff"/>
+          <rect x="21.5" y="26" width="11" height="24" rx="3.5" fill="#fff"/>
+          <circle cx="46" cy="44.5" r="6" fill="#19E6DC"/>
+        </svg>
+        <span class="brand__name">Teddy Asinobi</span>
+      </a>
 
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Front End Development</span><br> Implementation of Designed Web Interfaces<br>
-                                    Hands on Experience with with HTML, CSS3 and JavaScript<br>
-                                    Knowledge of CSS processors (Bootstrap).<br>
-                                    Intermediate Knowledge of JavaScript framework. (ReactJS)
-                            </li>
-                            <li><span>Graphic Design</span><br> Creating stunning designs</li>
-                            <li><span>Debugging</span><br> Fixing errors found in your already existing website<br>
-                                in order to get smooth web flow</li>
-                            <li><span>Others</span><br> Optimizing websites for speed, performance and accessibility <br>Implementing 
-                                mobile responsive sites and also responsive across different browsers. <br>
-                                Moderate Experience with Cloud platforms such as Vercel and Netlify.<br>
-                                Experience with version control systems (Git, GitHub)
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2021 - Till Date</span><br> Freelance Front-End Developer</li>
-                            <li><span>2019 - 2021</span><br> Junior Developer at Jensiv Technologies, Owerri Imo State
-                            </li>
-                            <li><span>2018 - 2019</span><br> Intern Developer at Ken-Saro Wiwa Hub, Rivers State Nigeria
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2020 Traning</span><br> Jensiv Technologies, Nigeria</li>
-                            <li><span>2021 Internship</span><br> Ken-Saro Wiwa Hub, Nigeria</li>
-                            <li><span>2022 Training</span><br> Side Hustle Institute</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ABOUT SECTION ENDS -->
-    <!-- SERVICE SECTION -->
-    <section id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-sharp fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>In order to buiild stunning web pages that are also responsive
-                        the language used is JavaScript. While HTML, CSS are used as mark-up languages. Also if you
-                        need to debug an existing website, You can count on me to find and fix the said
-                        error.
-                    </p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>Graphic Design</h2>
-                    <p>As mentioned Graphic design is also a skill I possess,
-                        build/create your banners, flyers, infographics, logos, programmes and any other graphic
-                        related works
-                    </p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-chalkboard-user"></i>
-                    <h2>Other Skills..</h2>
-                    <p>Optimizing websites for speed, performance and accessibility, Implementing 
-                        mobile responsive sites and also responsive across different browsers. 
-                        Moderate Experience with Cloud platforms such as Vercel and Netlify.
-                        Experience with version control systems (Git, GitHub)
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
 
-    <!-- SERVICE SECTION ENDS -->
-    <!-- PORFOLIO -->
-    <section id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="Image/project/sports update.PNG" alt="Live update site">
-                    <div class="layer">
-                        <h3>Live Sports Update Site</h3>
-                        <p>This is a sports Live Updates website where users can get live updates about
-                            their favourite sports or teams.  
-                        </p>
-                        <a href="https://teddyasinobi-01.github.io/Sports-Update/"> <i
-                                class="fa-solid fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="Image/project/project-02.PNG" alt="ecommerce project">
-                    <div class="layer">
-                        <h3>Ecommerce Site</h3>
-                        <p>This is an ecommerce website used in selling heavy duty truck parts.</p>
-                        <a href="https://hd-auto-space.netlify.app"> <i class="fa-solid fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="Image/project/project-03.PNG" alt="school project">
-                    <div class="layer">
-                        <h3>School website</h3>
-                        <p>This is a website meant to attract parents/guardians to enroll their children/wards in a
-                            school.</p>
-                        <a href="https://teddyasinobi-01.github.io/Olodo-school/"> <i
-                                class="fa-solid fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="https://github.com/TeddyAsinobi-01?tab=repositories" class="btn"> See More</a>
-        </div>
-    </section>
-    <!-- PORFOLIO ENDS -->
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p> <i class="fa-solid fa-paper-plane"></i> ibonisaledu@gmail.com</p>
-                    <p class="call"><i class="fa-solid fa-phone-square "></i> Call Me On: <a
-                            href="tel:07017286207">+234-701-728-6207</a></p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/ibonisa.ledu?mibextid=ZbWKwL"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/jessi-asinobi-8b3aa6253/"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/TeddyAsinobi-01"><i class="fa-brands fa-square-github"></i></a>
-                        <a href="https://twitter.com/teddy_asinobi"><i class="fa-brands fa-square-twitter"></i></a>
-                    </div>
-                    <a href="document/Asinobi Teddy CV.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" id="name" placeholder="Your Name" required>
-                        <input type="email" name="Email" id="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class=" btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-    <div class="copyright">
-        <p>Copyright © Teddy Asinobi, Made with <span>❤</span> by Ibonisa It Solutions </p>
+      <nav class="site-nav" id="site-menu" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact" class="btn btn--small">Hire me</a></li>
+        </ul>
+      </nav>
     </div>
-    <!-- CONTACT ENDS -->
-    <script src="app.js"></script>
-</body>
+  </header>
 
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__grid">
+        <h1 class="hero__name" id="hero-title">
+          <span>Teddy</span>
+          <span>Asinobi</span>
+        </h1>
+
+        <img class="hero__portrait" src="assets/img/teddy.webp" width="472" height="529"
+             alt="Teddy Asinobi smiling in a navy blazer and light blue shirt" fetchpriority="high">
+
+        <div class="hero__copy">
+          <p class="hero__role">Front-end developer and vibe coder, based in Nigeria.</p>
+          <p>I design and build fast, responsive websites, and I use AI as my pair programmer to ship them sooner.</p>
+          <div class="hero__actions">
+            <a class="btn btn--cyan" href="#work">See my work <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            <a class="btn btn--outline-light" href="documents/Teddy-Asinobi-CV.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="about">
+          <h2 class="section__title" id="about-title">I turn designs into fast, accessible websites.</h2>
+          <div class="about__text prose">
+            <p>I'm a front-end developer who builds clear, engaging interfaces for websites and web apps. I meet deadlines, and I care about the small details that make a site feel finished.</p>
+            <p>I can take a new website from the first sketch to a live launch on my own: design, code, testing and deployment.</p>
+            <p>I also vibe code. I describe what I want to AI coding tools in plain language, then review, test and refine every line before it ships. It gets projects moving faster without lowering the quality bar.</p>
+          </div>
+        </div>
+
+        <div class="tabs" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="About Teddy">
+            <button class="tabs__tab" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="true" type="button">Skills</button>
+            <button class="tabs__tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1" type="button">Experience</button>
+            <button class="tabs__tab" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false" tabindex="-1" type="button">Education</button>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-skills" aria-labelledby="tab-skills" tabindex="0">
+            <div class="skills">
+              <article class="skill">
+                <h3 class="skill__title">Front-end development</h3>
+                <p>Turning designed interfaces into working websites with HTML, CSS3 and JavaScript. Comfortable with Bootstrap, and intermediate with React.</p>
+                <ul class="chips">
+                  <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li><li>React</li>
+                </ul>
+              </article>
+              <article class="skill skill--feature">
+                <h3 class="skill__title"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg> Vibe coding</h3>
+                <p>Building with AI coding assistants. I prompt, review, test and refine the generated code until it is clean, fast and ready for production.</p>
+                <ul class="chips">
+                  <li>AI-assisted development</li><li>Prompt writing</li><li>Code review</li><li>Rapid prototyping</li>
+                </ul>
+              </article>
+              <article class="skill skill--half">
+                <h3 class="skill__title">Graphic design</h3>
+                <p>Banners, flyers, infographics, logos and programmes that match the site they sit beside.</p>
+              </article>
+              <article class="skill skill--half">
+                <h3 class="skill__title">Debugging</h3>
+                <p>Finding and fixing errors in an existing website so it flows smoothly again.</p>
+              </article>
+              <article class="skill skill--wide">
+                <h3 class="skill__title">Shipping and quality</h3>
+                <p>Optimising for speed, performance and accessibility. Building responsive sites that behave across browsers. Deploying on Vercel and Netlify, with Git and GitHub for version control.</p>
+                <ul class="chips">
+                  <li>Performance</li><li>Accessibility</li><li>Responsive design</li><li>Vercel</li><li>Netlify</li><li>Git</li><li>GitHub</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-experience" aria-labelledby="tab-experience" tabindex="0">
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__date">2021 to present</p>
+                <h3 class="timeline__title">Freelance Front-End Developer</h3>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__date">2019 to 2021</p>
+                <h3 class="timeline__title">Junior Developer</h3>
+                <p>Jensiv Technologies, Owerri, Imo State</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__date">2018 to 2019</p>
+                <h3 class="timeline__title">Intern Developer</h3>
+                <p>Ken-Saro Wiwa Hub, Rivers State, Nigeria</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-education" aria-labelledby="tab-education" tabindex="0">
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__date">2022</p>
+                <h3 class="timeline__title">Training</h3>
+                <p>Side Hustle Institute</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__date">2021</p>
+                <h3 class="timeline__title">Internship</h3>
+                <p>Ken-Saro Wiwa Hub, Nigeria</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__date">2020</p>
+                <h3 class="timeline__title">Training</h3>
+                <p>Jensiv Technologies, Nigeria</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section--tight" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <h2 class="section__title" id="services-title">What I can build for you</h2>
+        <ul class="services">
+          <li class="service">
+            <svg class="icon service__icon" aria-hidden="true"><use href="#i-code"/></svg>
+            <h3 class="service__title">Web design and development</h3>
+            <p>Responsive websites and web apps, written in HTML, CSS and JavaScript. Pages that load fast, look right on every screen and are easy for you to update.</p>
+          </li>
+          <li class="service">
+            <svg class="icon service__icon" aria-hidden="true"><use href="#i-sparkles"/></svg>
+            <h3 class="service__title">Vibe coding</h3>
+            <p>Got an idea you want to see running this week? I turn it into a working prototype with AI tools, then harden the code by hand so it is ready for real users.</p>
+          </li>
+          <li class="service">
+            <svg class="icon service__icon" aria-hidden="true"><use href="#i-pen"/></svg>
+            <h3 class="service__title">Graphic design</h3>
+            <p>Banners, flyers, infographics, logos and programmes, designed to match your brand and your website.</p>
+          </li>
+          <li class="service">
+            <svg class="icon service__icon" aria-hidden="true"><use href="#i-zap"/></svg>
+            <h3 class="service__title">Debugging and performance</h3>
+            <p>Send me the site that's misbehaving. I'll find the bug, fix it, and speed up the page while I'm in there.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 class="section__title" id="work-title">Selected work</h2>
+
+        <div class="projects">
+          <article class="project">
+            <a class="project__frame" href="https://hd-auto-space.netlify.app" target="_blank" rel="noopener" aria-label="Open HD Auto Space in a new tab">
+              <span class="frame__bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame__url">hd-auto-space.netlify.app</span></span>
+              <img src="assets/img/projects/hd-auto-space.webp" width="1200" height="634" loading="lazy" alt="HD Auto Space homepage showing a water pump for a Howo engine and a product category menu">
+            </a>
+            <div class="project__body">
+              <h3 class="project__title">HD Auto Space</h3>
+              <p>An online shop for heavy-duty truck parts, with a browsable category menu, product search and WhatsApp ordering.</p>
+              <a class="link-arrow" href="https://hd-auto-space.netlify.app" target="_blank" rel="noopener">Visit live site <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project__frame" href="https://teddyasinobi-01.github.io/Sports-Update/" target="_blank" rel="noopener" aria-label="Open Live Sports Update in a new tab">
+              <span class="frame__bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame__url">teddyasinobi-01.github.io/Sports-Update</span></span>
+              <img src="assets/img/projects/sports-update.webp" width="1200" height="532" loading="lazy" alt="Live Sports Update homepage with the headline We Give Live Updates On Game Results">
+            </a>
+            <div class="project__body">
+              <h3 class="project__title">Live Sports Update</h3>
+              <p>A sports site where fans follow live updates on their favourite sports and teams, with a sign-up for updates.</p>
+              <a class="link-arrow" href="https://teddyasinobi-01.github.io/Sports-Update/" target="_blank" rel="noopener">Visit live site <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project__frame" href="https://teddyasinobi-01.github.io/Olodo-school/" target="_blank" rel="noopener" aria-label="Open Olodo Academy College in a new tab">
+              <span class="frame__bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame__url">teddyasinobi-01.github.io/Olodo-school</span></span>
+              <img src="assets/img/projects/olodo-academy.webp" width="1200" height="632" loading="lazy" alt="Olodo Academy College homepage with two children using a laptop in an ICT centre">
+            </a>
+            <div class="project__body">
+              <h3 class="project__title">Olodo Academy College</h3>
+              <p>A school website that helps parents and guardians explore the school and enrol their children.</p>
+              <a class="link-arrow" href="https://teddyasinobi-01.github.io/Olodo-school/" target="_blank" rel="noopener">Visit live site <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </article>
+        </div>
+
+        <p class="work__more">
+          <a class="btn btn--outline" href="https://github.com/TeddyAsinobi-01?tab=repositories" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> More projects on GitHub
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--flush" id="contact" aria-labelledby="contact-title">
+      <div class="contact">
+        <div class="contact__info">
+          <h2 class="section__title section__title--light" id="contact-title">Have a project in mind? Let's talk.</h2>
+          <p class="contact__lead">Tell me what you need and I'll reply with next steps.</p>
+
+          <ul class="contact__list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> <a href="mailto:ibonisaledu@gmail.com">ibonisaledu@gmail.com</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> <a href="tel:+2347017286207">+234 701 728 6207</a></li>
+          </ul>
+
+          <ul class="socials" aria-label="Teddy on social media">
+            <li><a href="https://github.com/TeddyAsinobi-01" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/jessi-asinobi-8b3aa6253/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="https://twitter.com/teddy_asinobi" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+            <li><a href="https://www.facebook.com/ibonisa.ledu?mibextid=ZbWKwL" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          </ul>
+        </div>
+
+        <form class="form" name="submit-to-google-sheet" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="Name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="Email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">What do you need?</label>
+            <textarea id="message" name="Message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn--cyan" type="submit">
+            <span class="btn__label">Send message</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+          </button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__bar">
+      <p>&copy; <span data-year>2026</span> Teddy Asinobi. Built by Ibonisa IT Solutions.</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
 </html>

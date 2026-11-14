@@ -1,34 +1,29 @@
-Portfolio Project
+# Teddy Asinobi: Portfolio
 
-Description
-This is a personal portfolio project showcasing my skills, projects, and experiences. The goal is to provide a glimpse into my capabilities and accomplishments.
+Personal portfolio for Teddy Asinobi, front-end developer and vibe coder in Nigeria.
+Plain HTML, CSS and JavaScript. No build step, no frameworks, no icon scripts.
 
-Features
+## Run it
+Open `index.html` in a browser, or serve the folder with any static host (Netlify, Vercel, GitHub Pages).
 
-About Me: Brief introduction about myself.
+## Structure
+```
+index.html            Page markup (icons are an inline SVG sprite)
+css/style.css         Design tokens, components, sections, responsive rules
+js/main.js            Mobile menu, accessible tabs, nav highlight, contact form
+assets/img/           Portrait and optimised project screenshots (WebP)
+assets/icons/         Favicon set (SVG, ICO, PNG, Apple touch icon)
+assets/logo.png       Logo lockup on a transparent background
+assets/og-image.png   Social sharing image (1200x630)
+documents/            CV (PDF and DOCX)
+site.webmanifest      Install/theme metadata
+```
 
-Projects: Highlighting key projects with descriptions and links.
+## Common edits
+- **Colours:** change the variables at the top of `css/style.css` (`:root`).
+- **Add a project:** copy one `<article class="project">` block in `index.html` and add a WebP screenshot to `assets/img/projects/`.
+- **Contact form:** messages post to the Google Apps Script URL in `FORM_ENDPOINT` at the top of `js/main.js`.
+- **Social sharing:** once the site is live, change `og:image` in `index.html` to the full URL (for example `https://yourdomain.com/assets/og-image.png`).
 
-Skills: List of technical and soft skills.
-
-Contact: Ways to get in touch with me.
-
-Getting Started
-
-Clone the repository: git clone [repository URL]
-Open index.html in a web browser.
-
-Usage
-
-Navigate through the sections using the menu.
-Click on project links to view detailed information.
-
-Technologies Used
-
-HTML5
-CSS3
-JavaScript
-
-Support
-
-If you have any questions or suggestions, feel free to contact me via email.
+## Fonts
+Bricolage Grotesque and Instrument Sans load from Google Fonts. If they can't load, the page falls back to Inter and then the system font.

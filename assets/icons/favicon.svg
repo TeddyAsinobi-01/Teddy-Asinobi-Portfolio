@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Teddy Asinobi">
+  <rect width="64" height="64" rx="16" fill="#2340F0"/>
+  <rect x="11" y="15" width="35" height="11" rx="3.5" fill="#fff"/>
+  <rect x="21.5" y="26" width="11" height="24" rx="3.5" fill="#fff"/>
+  <circle cx="46" cy="44.5" r="6" fill="#19E6DC"/>
+</svg>
